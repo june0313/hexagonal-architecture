@@ -15,7 +15,7 @@ public class RegexEventParser implements EventParser{
 
     @Override
     public Event parseEvent(String event) {
-        final String regex = "(\\\"[^\\\"]+\\\")|\\S+";
+        final String regex = "(\"[^\"]+\")|\\S+";
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(event);
 
